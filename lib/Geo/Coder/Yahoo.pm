@@ -7,7 +7,7 @@ use URI::QueryParam;
 use LWP::UserAgent;
 use Yahoo::Search::XML;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 my $ua;
@@ -15,6 +15,7 @@ sub _ua {
     return $ua if $ua;
     $ua = LWP::UserAgent->new;
     $ua->agent(__PACKAGE__ . '/' . $VERSION);
+    $ua->env_proxy;
     $ua;
 }
 
@@ -53,27 +54,6 @@ sub geocode {
     $results;
 }
 
-no warnings;
-my %EntityDecode =
-(
-  amp  => '&',
-  lt   => '<',
-  gt   => '>',
-  apos => "'",
-  quot => '"', #"
- );
-
-sub Yahoo::Search::XML::_entity($) {
-    my $name = shift;
-    if (my $val = $EntityDecode{$name}) {
-        return $val;
-    } elsif ($name =~ m/^\#(\d+)$/) {
-        return chr($1);
-    } else {
-        die "unknown entity &$name;";
-    }
-}
-
 
 =head1 NAME
 
@@ -98,12 +78,16 @@ Provides a thin Perl interface to the Yahoo! Geocoding API.
 Read more about the API at
 L<http://developer.yahoo.net/maps/rest/V1/geocode.html>.
 
+=head1 PROXY SETTINGS
+
+We use the standard proxy setting environment variables via LWP.  See
+the LWP documentation for more information.
+
 =head1 EVIL HACKS
 
-Redefines the Yahoo::Search::XML::_entity function with a patched one.
-(I'll take the hacked one out when a new Yahoo::Search package is
-released).  The geocoding API is returning some HTML entities that
-apparently aren't used anywhere else in the Yahoo APIs.  :-)
+In version 0.01 this module redefined the Yahoo::Search::XML::_entity
+function with a fixed one.  In Yahoo::Search 1.5.8 that function was
+fixed, so we don't do that anymore.
 
 =head1 METHODS
 
@@ -122,9 +106,11 @@ Parameters are the URI arguments documented on the Yahoo API page
 (location, street, city, state, zip).  You usually just need one of
 them to get results.
 
-Returns a reference to an array of results.  More than one result may
-be returned if the given address is ambiguous.  Each result is a
-hashref with data like the following example:
+C<geocode> returns a reference to an array of results (an arrayref).
+More than one result may be returned if the given address is
+ambiguous.
+
+Each result in the arrayref is a hashref with data like the following example:
 
     {
      'country' => 'US',
@@ -223,6 +209,12 @@ You can find documentation for this module with the perldoc command.
 You can also look for information at:
 
 =over 4
+
+=item * SVN Repository
+
+The latest code is available from the perl.org Subversion repository,
+L<http://svn.perl.org/modules/Geo-Coder-Yahoo/>.  You can browse it at 
+L<http://svn.perl.org/viewcvs/modules/Geo-Coder-Yahoo/>.
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
