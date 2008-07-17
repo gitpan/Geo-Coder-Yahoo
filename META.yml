@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Geo-Coder-Yahoo
-version:             0.40
+version:             0.41
 abstract:            Geocode addresses with the Yahoo! API 
 license:             perl
 author:              
@@ -8,6 +8,7 @@ author:
 generated_by:        ExtUtils::MakeMaker version 6.44
 distribution_type:   module
 requires:     
+    Encode:                        0
     LWP::UserAgent:                0
     Test::More:                    0
     URI:                           0
