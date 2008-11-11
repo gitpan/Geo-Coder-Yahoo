@@ -1,18 +1,15 @@
---- #YAML:1.0
-name:                Geo-Coder-Yahoo
-version:             0.41
-abstract:            Geocode addresses with the Yahoo! API 
-license:             perl
-author:              
-    - Ask Bjoern Hansen <ask@develooper.com>
-generated_by:        ExtUtils::MakeMaker version 6.44
-distribution_type:   module
-requires:     
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Geo-Coder-Yahoo
+version:      0.42
+version_from: lib/Geo/Coder/Yahoo.pm
+installdirs:  site
+requires:
     Encode:                        0
     LWP::UserAgent:                0
     Test::More:                    0
-    URI:                           0
+    URI:                           1.36
     Yahoo::Search::XML:            20060729.004
-meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30
