@@ -8,7 +8,7 @@ use URI::QueryParam;
 use LWP::UserAgent;
 use Yahoo::Search::XML;
 
-our $VERSION = '0.43';
+our $VERSION = '0.44';
 
 my $ua;
 sub _ua {
@@ -212,6 +212,8 @@ The latest code is available from the git repository at
 L<git://git.develooper.com/Geo-Coder-Yahoo.git>.  You can browse it at 
 L<http://git.develooper.com/?p=Geo-Coder-Yahoo.git;a=summary>.
 
+It is also at L<http://github.com/abh/geo-coder-yahoo/tree/master>. 
+
 =item * CPAN Ratings
 
 L<http://cpanratings.perl.org/d/Geo-Coder-Yahoo>
@@ -232,7 +234,7 @@ Thanks to Yahoo for providing this free API.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005-2008 Ask Bjoern Hansen, all rights reserved.
+Copyright 2005-2009 Ask Bjoern Hansen, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

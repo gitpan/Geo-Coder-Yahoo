@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Geo-Coder-Yahoo
-version:            0.43
+version:            0.44
 abstract:           Geocode addresses with the Yahoo! API 
 author:
     - Ask Bjoern Hansen <ask@develooper.com>
