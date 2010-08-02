@@ -19,8 +19,13 @@ PROXY SETTINGS
 
 METHODS
   new
-        Geo::Coder::Yahoo->new(appid => $appid)
-        Geo::Coder::Yahoo->new(appid => $appid, on_error => sub { ... })
+        $geocoder = Geo::Coder::Yahoo->new(appid => $appid)
+
+        $geocoder = Geo::Coder::Yahoo->new(
+            appid => $appid,
+            on_error => sub { ... },
+            ua => LWP::UserAgent->new,
+        )
 
     Instantiates a new object.
 
@@ -34,6 +39,9 @@ METHODS
     geocode object as the first argument and the HTTP::Response object as
     the second. The return value from the subroutine is used as the return
     value from "geocode".
+
+    ua specifies the user agent object to use. If not set then a new
+    LWP::UserAgent will be instanciated.
 
   geocode( location => $location )
     Parameters are the URI arguments documented on the Yahoo API page
@@ -97,6 +105,14 @@ METHODS
 
     country
         Country in which the result is located.
+
+  ua
+        $ua = $geocoder->ua;
+
+        $geocoder->ua( $new_ua );
+
+    Sets the user agent object to be used, if one is passed. Returns the
+    user agent object.
 
 AUTHOR
     Ask Bjørn Hansen, "<ask at develooper.com>"
