@@ -17,8 +17,8 @@ requires:
   Encode: 0
   LWP::UserAgent: 0
   URI: 1.36
-  Yahoo::Search::XML: 20060729.004
+  Yahoo::Search::XML: 20100614.1
 resources:
   homepage: http://search.cpan.org/dist/Geo-Coder-Yahoo/
   repository: http://git.develooper.com/Geo-Coder-Yahoo.git
-version: 0.46
+version: 0.47

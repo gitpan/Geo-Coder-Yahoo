@@ -25,9 +25,9 @@ my %WriteMakefileArgs = (
     'Encode' => '0',
     'LWP::UserAgent' => '0',
     'URI' => '1.36',
-    'Yahoo::Search::XML' => '20060729.004'
+    'Yahoo::Search::XML' => '20100614.1'
   },
-  'VERSION' => '0.46',
+  'VERSION' => '0.47',
   'test' => {
     'TESTS' => 't/*.t'
   }

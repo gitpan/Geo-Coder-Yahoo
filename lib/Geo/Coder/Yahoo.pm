@@ -1,6 +1,6 @@
 package Geo::Coder::Yahoo;
 BEGIN {
-  $Geo::Coder::Yahoo::VERSION = '0.46';
+  $Geo::Coder::Yahoo::VERSION = '0.47';
 }
 
 use warnings;
