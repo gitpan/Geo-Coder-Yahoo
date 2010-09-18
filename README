@@ -13,6 +13,12 @@ OFFICIAL API DOCUMENTATION
     Read more about the API at
     <http://developer.yahoo.net/maps/rest/V1/geocode.html>.
 
+    Yahoo! says that this API is deprecated and suggest using the
+    placefinder API instead. There's a module for that in
+    Geo::Coder::Placefinder.
+
+    See also Geo::Coder::Many.
+
 PROXY SETTINGS
     We use the standard proxy setting environment variables via LWP. See the
     LWP documentation for more information.

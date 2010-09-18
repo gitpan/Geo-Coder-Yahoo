@@ -5,6 +5,7 @@ MANIFEST.SKIP
 META.yml
 Makefile.PL
 README
+bin/ygeocode
 dist.ini
 eg/geocoder.pl
 lib/Geo/Coder/Yahoo.pm

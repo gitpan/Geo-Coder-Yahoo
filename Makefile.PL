@@ -18,7 +18,9 @@ my %WriteMakefileArgs = (
     'ExtUtils::MakeMaker' => '6.31'
   },
   'DISTNAME' => 'Geo-Coder-Yahoo',
-  'EXE_FILES' => [],
+  'EXE_FILES' => [
+    'bin/ygeocode'
+  ],
   'LICENSE' => 'perl',
   'NAME' => 'Geo::Coder::Yahoo',
   'PREREQ_PM' => {
@@ -27,7 +29,7 @@ my %WriteMakefileArgs = (
     'URI' => '1.36',
     'Yahoo::Search::XML' => '20100614.1'
   },
-  'VERSION' => '0.47',
+  'VERSION' => '0.48',
   'test' => {
     'TESTS' => 't/*.t'
   }
