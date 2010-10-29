@@ -25,11 +25,12 @@ my %WriteMakefileArgs = (
   'NAME' => 'Geo::Coder::Yahoo',
   'PREREQ_PM' => {
     'Encode' => '0',
+    'JSON' => '2',
     'LWP::UserAgent' => '0',
     'URI' => '1.36',
     'Yahoo::Search::XML' => '20100614.1'
   },
-  'VERSION' => '0.48',
+  'VERSION' => '0.49',
   'test' => {
     'TESTS' => 't/*.t'
   }

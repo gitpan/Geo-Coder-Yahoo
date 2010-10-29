@@ -1,5 +1,8 @@
 Revision history for Geo-Coder-Yahoo
 
+0.49    October 29, 2010
+        - Add JSON requirement for the ygeocode tool
+
 0.48    September 18, 2010
         - Add `ygeocode` utility
         - Add note about Placefinder API to documentation 
