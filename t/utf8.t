@@ -1,8 +1,7 @@
 #!perl -T
 use strict;
 use warnings;
-
-use Test::More tests => 7;
+use Test::More;
 
 # guts of Test::More::UTF8
 binmode Test::More->builder->$_, ':utf8'
@@ -33,3 +32,4 @@ SKIP: {
 
 }
 
+done_testing();

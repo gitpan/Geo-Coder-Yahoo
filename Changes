@@ -1,5 +1,8 @@
 Revision history for Geo-Coder-Yahoo
 
+0.50    November 5, 2010
+        - More utf8.t test trouble (no code changes)
+
 0.49    October 29, 2010
         - Add JSON requirement for the ygeocode tool
 

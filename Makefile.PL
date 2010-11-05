@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'URI' => '1.36',
     'Yahoo::Search::XML' => '20100614.1'
   },
-  'VERSION' => '0.49',
+  'VERSION' => '0.50',
   'test' => {
     'TESTS' => 't/*.t'
   }
